@@ -30,9 +30,12 @@ GEM
     minitest (5.16.3)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    puma (6.0.0)
+      nio4r (~> 2.0)
     rack (2.2.4)
     rack-contrib (2.3.0)
       rack (~> 2.0)
@@ -84,6 +87,7 @@ DEPENDENCIES
   activerecord
   database_cleaner
   pry
+  puma
   rack-contrib
   rack-cors
   rack-test

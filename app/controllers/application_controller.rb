@@ -5,5 +5,18 @@ class ApplicationController < Sinatra::Base
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
+  get "/faith" do
+    "hi am faith"
+  end
+  get "/teams" do
+    teams = Team.all
+   teams.to_json(include: :players)
+  end
+
+  get "/players" do
+    players = Player.all
+    players.to_json(include: :team)
+  end
+
 
 end

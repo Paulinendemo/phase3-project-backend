@@ -34,6 +34,8 @@ gem "sqlite3"
 # Require all files in a folder
 gem "require_all"
 
+gem "puma"
+
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry"
