@@ -34,13 +34,15 @@ gem "sqlite3"
 # Require all files in a folder
 gem "require_all"
 
+gem "puma"
+
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry"
 
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
-  # gem "rerun"
+  gem "rerun"
 end
 
 # These gems will only be used when we are running tests
