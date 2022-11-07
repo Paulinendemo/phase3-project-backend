@@ -18,5 +18,13 @@ class ApplicationController < Sinatra::Base
     players.to_json(include: :team)
   end
 
+  post "/teams" do
+    team = Team.create(params)
+    teams = Team.all
+    teams.to_json
+
+  end
+
+
 
 end
