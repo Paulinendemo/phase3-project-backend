@@ -69,4 +69,10 @@ class ApplicationController < Sinatra::Base
     players.to_json
   end
 
+  
+  get "/top_scoringteams" do
+    teams = Team.all.sort_by{|team| team.goals_of_team}.reverse.first(5)
+    teams.to_json(include: :players)
+  end
+
 end
