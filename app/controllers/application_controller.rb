@@ -34,7 +34,8 @@ class ApplicationController < Sinatra::Base
   delete "/players/:id"
   player = Player.find(params[:id])
   player.destroy
-  
+  players=Player.all
+  players.to_json
 
 
   end
