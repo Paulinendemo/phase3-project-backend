@@ -31,6 +31,8 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  delete "/players/:id"
+
 
 
 end
