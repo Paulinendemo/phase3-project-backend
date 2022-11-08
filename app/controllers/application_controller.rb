@@ -32,6 +32,13 @@ class ApplicationController < Sinatra::Base
   end
 
   delete "/players/:id"
+  player = Player.find(params[:id])
+  player.destroy
+  
+
+
+  end
+
 
 
 
