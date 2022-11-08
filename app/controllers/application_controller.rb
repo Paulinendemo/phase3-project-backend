@@ -59,4 +59,10 @@ class ApplicationController < Sinatra::Base
     player.to_json
   end
 
+  get "/top_goalscorers" do 
+    players = Player.all.order(goals: :desc).limit(5)
+    players.to_json
+  end
+
+
 end
