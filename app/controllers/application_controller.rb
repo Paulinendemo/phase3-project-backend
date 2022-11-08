@@ -52,7 +52,11 @@ class ApplicationController < Sinatra::Base
     teams.to_json
   end
 
-
-
+  patch '/players/:id' do
+    player = Player.find(params[:id])
+    player.update(params)
+    players = Player.all
+    player.to_json
+  end
 
 end
