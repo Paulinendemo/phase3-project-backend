@@ -64,5 +64,9 @@ class ApplicationController < Sinatra::Base
     players.to_json
   end
 
+  get "/top_assisters" do
+    players = Player.all.order(assists: :desc).limit(5)
+    players.to_json
+  end
 
 end
