@@ -41,7 +41,7 @@ arsenal = Team.create(
 players = Player.create([
     {
         name: "Harry Maguire",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Harry_Maguire_2019.jpg/1200px-Harry_Maguire_2019.jpg",
+        image: "https://img.a.transfermarkt.technology/portrait/header/177907-1663841733.jpg?lm=1",
         position: "Defender",
         goals: 0,
         assists: 0,
@@ -49,7 +49,7 @@ players = Player.create([
     },
     {
         name: "Serhio Aguero",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sergio_Ag%C3%BCero_2019.jpg/1200px-Sergio_Ag%C3%BCero_2019.jpg",
+        image: "https://img.a.transfermarkt.technology/portrait/header/26399-1580460866.jpg?lm=1",
         position: "Forward",
         goals: 10,
         assists: 0,
