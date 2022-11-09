@@ -56,7 +56,7 @@ class ApplicationController < Sinatra::Base
     player = Player.find(params[:id])
     player.update(params)
     players = Player.all
-    player.to_json
+    players.to_json
   end
 
   get "/top_goalscorers" do 
