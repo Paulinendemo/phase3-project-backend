@@ -38,41 +38,4 @@ class ApplicationController < Sinatra::Base
     players.to_json
   end
 
-  delete "/teams/:id" do
-    team = Team.find(params[:id]) 
-    team.destroy
-    teams=Team.all
-    teams.to_json
-  end
-
-  patch "/teams/:id" do
-    team = Team.find(params[:id])
-    team.update(params)
-    teams = Team.all
-    teams.to_json
-  end
-
-  patch '/players/:id' do
-    player = Player.find(params[:id])
-    player.update(params)
-    players = Player.all
-    player.to_json
-  end
-
-  get "/top_goalscorers" do 
-    players = Player.all.order(goals: :desc).limit(5)
-    players.to_json
-  end
-
-  get "/top_assisters" do
-    players = Player.all.order(assists: :desc).limit(5)
-    players.to_json
-  end
-
   
-  get "/top_scoringteams" do
-    teams = Team.all.sort_by{|team| team.goals_of_team}.reverse.first(5)
-    teams.to_json(include: :players)
-  end
-
-end
