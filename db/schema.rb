@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_04_143627) do
     t.string "name"
     t.string "image"
     t.string "position"
-    t.integer "goals"
-    t.integer "assists"
+    t.integer "goals", default: 0
+    t.integer "assists", default: 0
     t.integer "team_id"
   end
 

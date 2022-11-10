@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
     "hi am faith"
   end
   get "/teams" do
-    teams = Team.all
+    teams = Team.all.order(:points).reverse
    teams.to_json(include: :players)
   end
 
@@ -61,12 +61,12 @@ class ApplicationController < Sinatra::Base
 
   get "/top_goalscorers" do 
     players = Player.all.order(goals: :desc).limit(5)
-    players.to_json
+    players.to_json(include: :team)
   end
 
   get "/top_assisters" do
     players = Player.all.order(assists: :desc).limit(5)
-    players.to_json
+    players.to_json(include: :team)
   end
 
   
