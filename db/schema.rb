@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_04_143627) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_10_063514) do
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.string "image"
@@ -29,6 +29,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_04_143627) do
     t.integer "matches_drawn", default: 0
     t.integer "points", default: 0
     t.string "coach"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
